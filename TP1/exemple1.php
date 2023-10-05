@@ -35,11 +35,12 @@
 <!-- PDO -->
 <?php
 $servername = "localhost";
+$dbname = "cosider_php";
 $username = "root";
 $password = "";
 
 try {
-    $conn = new PDO("mysql:host=$servername;dbname=cosider_php", $username, $password);
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     echo"Connection réusie";
 
